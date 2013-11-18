@@ -14,3 +14,19 @@ describe 'blog posts index page' do
   end
 
 end
+
+describe 'adding a new post' do
+  it 'can be added from the New Post form' do
+    visit '/posts/new'
+    fill_in 'Title', with: 'Hello world'
+    fill_in 'Body', with: 'Lorem ipsum'
+    click_button 'Save post'
+
+    expect(page).to have_content 'Post saved'
+  end
+end
+
+
+
+
+

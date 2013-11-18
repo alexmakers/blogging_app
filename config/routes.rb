@@ -1,6 +1,12 @@
 BloggingApp::Application.routes.draw do
 
-  get '/posts' => 'posts#index'
+  resources :comments
+
+  # get '/posts' => 'posts#index'
+  # get '/posts/new' => 'posts#new'
+
+  resources :posts
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
