@@ -25,8 +25,3 @@ describe 'adding a new post' do
     expect(page).to have_content 'Post saved'
   end
 end
-
-
-
-
-

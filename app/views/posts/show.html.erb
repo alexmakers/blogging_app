@@ -1,0 +1,12 @@
+<%= render 'post', post: @post %>
+
+<%= pluralize @post.comments.count, 'comment' %>
+
+<% @post.comments.each do |comment| %>
+  <%= comment.body %>
+<% end %>
+
+<%= form_for [@post, Comment.new] do |f| %>
+  <%= f.text_area :body, placeholder: 'Comment' %>
+  <%= f.submit 'Post comment' %>
+<% end %>
