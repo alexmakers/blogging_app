@@ -37,6 +37,7 @@ group :test, :development do
   gem 'capybara'
   gem 'shoulda-matchers'
   gem 'cucumber-rails'
+  gem 'aruba'
 end
 
 # Use ActiveModel has_secure_password
