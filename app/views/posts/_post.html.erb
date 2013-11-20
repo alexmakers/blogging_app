@@ -1,6 +1,7 @@
-<h3 class='votes-count'>0</h3>
-<button>⬆</button>
-<button>⬇</button>
+<h3 class='votes-count'><%= post.votes_total %></h3>
+<%= button_to '⬆', post_votes_path(post, direction: 'up') %>
+<%= button_to '⬇', post_votes_path(post, direction: 'down') %>
+
 <h1><%= link_to post.title, post %></h1>
 <%= post.body %>
 <%= link_to 'Edit me please!', edit_post_path(post) %>

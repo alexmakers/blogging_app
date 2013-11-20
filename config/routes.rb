@@ -5,6 +5,7 @@ BloggingApp::Application.routes.draw do
 
   resources :posts do
     resource :comments, only: [:new, :create]
+    resource :votes
   end
 
   # resources :tags do
