@@ -1,6 +1,9 @@
-<h3 class='votes-count'><%= post.votes_total %></h3>
-<%= button_to '⬆', post_votes_path(post, direction: 'up') %>
-<%= button_to '⬇', post_votes_path(post, direction: 'down') %>
+<h3 class='votes-count' data-id='<%= post.id %>'>
+  <%= post.votes_total %>
+</h3>
+
+<%= vote_button post, 'up', '⬆' %>
+<%= vote_button post, 'down', '⬇' %>
 
 <h1><%= link_to post.title, post %></h1>
 <%= post.body %>

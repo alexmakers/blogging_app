@@ -6,7 +6,7 @@ end
 
 describe 'voting' do
 
-  it 'keeps track of the vote totals' do
+  it 'keeps track of the vote totals', js: true do
     create_a_post
     visit '/posts'
     click_button '⬆'

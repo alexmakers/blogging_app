@@ -10,10 +10,10 @@ class Post < ActiveRecord::Base
   private
 
   def upvotes
-    votes.where(direction: 'up')
+    votes.up
   end
 
   def downvotes
-    votes.where(direction: 'down')
+    votes.down
   end
 end

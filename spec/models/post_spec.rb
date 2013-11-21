@@ -14,7 +14,7 @@ describe Post do
       expect(post.votes_total).to eq 1
     end
 
-    it 'should correctly calculate positive votes count' do
+    it 'should correctly calculate negative votes count' do
       post = Post.create(title: 'Hello world')
 
       post.stub upvotes: [double(:vote)]
