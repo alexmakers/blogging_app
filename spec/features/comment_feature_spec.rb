@@ -1,3 +1,5 @@
+require 'spec_helper'
+
 describe 'commenting' do
   
   before do
