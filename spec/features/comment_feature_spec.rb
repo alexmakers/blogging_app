@@ -3,7 +3,7 @@ require 'spec_helper'
 describe 'commenting' do
   
   before do
-    Post.create(title: 'Foobar', body: 'Some text here')
+    create(:post)
   end
 
   context 'article page' do
