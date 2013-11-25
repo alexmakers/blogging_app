@@ -1,5 +1,6 @@
 BloggingApp::Application.routes.draw do
 
+  devise_for :users
   # get '/posts' => 'posts#index'
   # get '/posts/new' => 'posts#new'
 
@@ -7,6 +8,7 @@ BloggingApp::Application.routes.draw do
     resource :comments, only: [:new, :create]
     resource :votes
   end
+  root 'posts#index'
 
   # resources :tags do
   #   resources :posts
